@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>GYM - Blog</title>
+    <link rel="icon" href="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" type="image/jpg">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-dark text-white pt-2">
+        <div class="container-fluid">
+            <!-- Logo y buscar -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+                <!-- Logo y nombre del gimnasio -->
+                <div class="d-flex align-items-center">
+                    <img src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" alt="Logo" width="50" height="50" class="me-2">
+                    <h1 class="h1 mb-0">GYM</h1>
+                </div>
+                <!-- Barra de busqueda para hacer espacio, no funciona -->
+                <form class="mx-4 d-none d-md-block" style="width: 400px;">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                </form>
+                <!-- Burger menu para cuando se vea en moviles -->
+                <button class="navbar-toggler d-md-none border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#megaMenu">
+                    <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                </button>
+            </div>
+            <!-- Mega menu-->
+            <nav class="navbar navbar-expand-md pt-0">
+                <div class="collapse navbar-collapse" id="megaMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- Menu - Pagina principal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="index.html" data-bs-toggle="dropdown">Pagina Principal</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+                                <li><a class="dropdown-item" href="index.html">Clases destacadas</a></li>
+                                <li><a class="dropdown-item" href="index.html">Testimonios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Clases -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="clases.html" data-bs-toggle="dropdown">Clases</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="clases.html">Musculacion</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                                <li><a class="dropdown-item" href="clases.html">CrossFit</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Spinning</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Entrenadores -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="entrenadores.html">Entrenadores</a>
+                        </li>
+                        <!-- Menu - Contacto -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="contacto.html" data-bs-toggle="dropdown">Contacto</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="contacto.html">Consultas</a></li>
+                                <li><a class="dropdown-item" href="contacto.html">Reclamos</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Precios -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="planes.html">Planes y Precios</a>
+                        </li>
+                        <!-- Menu - Blog -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="blog.html" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="blog.html">Posts</a></li>
+                                <li><a class="dropdown-item" href="blog.html">Comentarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- BLOG -->
+        <section class="py-5" style="background-color: #f8f9fa">
+            <div class="container">
+                <!-- Filtro -->
+                <div class="text-center mb-4">
+                    <button class="btn btn-outline-dark mx-1 filter-btn active" data-filter="all">Todos</button>
+                    <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="entrenamiento">Entrenamiento</button>
+                    <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="bienestar">Bienestar</button>
+                    <button class="btn btn-outline-dark mx-1 filter-btn" data-filter="nutricion">Nutricion</button>
+                </div>
+                <!-- Posts -->
+                <div class="row g-4" id="post-container">
+                    <!-- Post Entrenamiento -->
+                    <div class="col-md-4 post-card entrenamiento reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Entrena con proposito</h5>
+                            <p class="mb-0">No se trata de moverse, sino de avanzar.</p>
+                        </div>
+                    </div>
+                    <!-- Post Entrenamiento -->
+                    <div class="col-md-4 post-card entrenamiento reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Tecnica sobre peso</h5>
+                            <p class="mb-0">Una buena postura vale mas que 10 kg extra.</p>
+                        </div>
+                    </div>
+                    <!-- Post Entrenamiento -->
+                    <div class="col-md-4 post-card entrenamiento reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Tu ritmo, tu progreso</h5>
+                            <p class="mb-0">Cada cuerpo tiene su propio camino.</p>
+                        </div>
+                    </div>
+                    <!-- Post Bienestar -->
+                    <div class="col-md-4 post-card bienestar reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Respira y encuentra tu centro</h5>
+                            <p class="mb-0">La respiracion consciente es la clave del equilibrio.</p>
+                        </div>
+                    </div>
+                    <!-- Post Bienestar -->
+                    <div class="col-md-4 post-card bienestar reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>El poder del descanso</h5>
+                            <p class="mb-0">Dormir bien es parte de entrenar mejor.</p>
+                        </div>
+                    </div>
+                    <!-- Post Bienestar -->
+                    <div class="col-md-4 post-card bienestar reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Mindfulness en movimiento.</h5>
+                            <p class="mb-0">Entrena tu mente mientras mueves tu cuerpo.</p>
+                        </div>
+                    </div>
+                    <!-- Post Nutricion -->
+                    <div class="col-md-4 post-card nutricion reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Comer bien, vivir mejor</h5>
+                            <p class="mb-0">Pequeños cambios, grandes resultados.</p>
+                        </div>
+                    </div>
+                    <!-- Post Nutricion -->
+                    <div class="col-md-4 post-card nutricion reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Proteinas: aliadas del musculo</h5>
+                            <p class="mb-0">La base de una buena recuperacion empieza en el plato.</p>
+                        </div>
+                    </div>
+                    <!-- Post Nutricion -->
+                    <div class="col-md-4 post-card nutricion reveal">
+                        <div class="p-4 bg-white shadow-sm rounded post-box">
+                            <h5>Hidratacion inteligente</h5>
+                            <p class="mb-0">No subestimes el poder del agua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- COMENTARIOS -->
+        <section class="py-5" style="background-color: #e9ecef">
+            <div class="container">
+                <h4 class="mb-4">Comentarios</h4>
+                <!-- Comentario -->
+                <div class="d-flex align-items-start mb-3 comment reveal">
+                    <div class="avatar me-3">
+                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 20px;">V</div>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm w-100">
+                        <p class="mb-0">"Justo necesitaba ideas para mejorar mi desayuno. Muy util el post, gracias!"</p>
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="d-flex align-items-start mb-3 comment reveal">
+                    <div class="avatar me-3">
+                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 20px;">M</div>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm w-100">
+                        <p class="mb-0">"No sabia que el descanso afectaba tanto al rendimiento. Me lo voy a tomar en serio ahora."</p>
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="d-flex align-items-start mb-3 comment reveal">
+                    <div class="avatar me-3">
+                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 20px;">N</div>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm w-100">
+                        <p class="mb-0">"La rutina de ejercicios que compartieron me sirvio un monton, la vengo haciendo hace dos semanas."</p>
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="d-flex align-items-start mb-3 comment reveal">
+                    <div class="avatar me-3">
+                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 20px;">G</div>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm w-100">
+                        <p class="mb-0">"Buenisimo el articulo sobre hidratacion. A veces uno subestima lo basico."</p>
+                    </div>
+                </div>
+                <!-- Comentario -->
+                <div class="d-flex align-items-start mb-3 comment reveal">
+                    <div class="avatar me-3">
+                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; font-size: 20px;">R</div>
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm w-100">
+                        <p class="mb-0">"Me encanto el enfoque sobre bienestar emocional. No todo es levantar pesas, hay que cuidar la mente tambien."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Formulario para el newsletter -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="mb-3">Suscribete al newsletter</h4>
+                    <form id="formNewsletter" class="d-flex justify-content-between">
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                        <button type="submit" class="btn btn-warning ms-2" id="submitBtn">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                    <!-- Spinner de carga -->
+                    <div id="spinner" class="spinner-border text-warning mt-3" role="status" style="display: none;">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <h4>Seguinos en nuestras redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-facebook" style="font-size: 2rem;"> </i> Facebook
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-twitter" style="font-size: 2rem;"> </i> Twitter
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-instagram" style="font-size: 2rem;"> </i> Instagram
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-x" style="font-size: 2rem;"> </i> (Twitter)
+                        </a>
+                    </div>
+                </div>
+                <!-- Mapa -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="text-center mb-3">Ubicacion</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7279.025505971199!2d-65.29308207402464!3d-24.18881518866709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1744831361720!5m2!1ses-419!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS GENERALES -->
+    <!-- Para bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Para jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- SCRIPTS PARA EL HEADER -->
+    <!-- Script para el mega menu -->
+    <script>
+        $(document).ready(function () {
+            function activarHoverEnDropdowns() {
+                // Solo para pantallas grandes
+                if (window.innerWidth >= 768) {
+                    $('.nav-item.dropdown').hover(
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideDown(200);
+                        },
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideUp(200);
+                        }
+                    );
+                } else {
+                    // Remueve el efecto hover en moviles
+                    $('.nav-item.dropdown').off('mouseenter mouseleave');
+                    // Limpia todos los estilos si es que quedaron
+                    $('.dropdown-menu').removeAttr('style');
+                }
+            }
+            // Ejecuta al cargar la pagina
+            activarHoverEnDropdowns();
+            // Si cambia el tamaño de la pantalla se vuelve a activar
+            $(window).resize(function () {
+                activarHoverEnDropdowns();
+            });
+        });
+    </script>
+    <!-- SCRIPTS PARA LA PAGINA PRINCIPAL  -->
+    <!-- Scripts para filtrar y scroll reveal-->
+    <script>
+        // Filtro de categorias
+        $(".filter-btn").on("click", function () {
+            const filter = $(this).data("filter");
+            $(".filter-btn").removeClass("active");
+            $(this).addClass("active");
+            if (filter === "all") {
+                $(".post-card").fadeIn();
+            } else {
+                $(".post-card").hide();
+                $("." + filter).fadeIn();
+            }
+        });
+        // Intersection Observer para scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+    <!-- SCRIPTS PARA EL FOOTER -->
+    <!-- Script para el formulario -->
+    <script>
+        $(document).ready(function () {
+            $('#formNewsletter').submit(function (e) {
+                // Previene el comportamiento normal de un formulario, enviar los datos y mandar a otro lado
+                e.preventDefault();
+                // Mostrar el spinner
+                $('#spinner').show();
+                $('#submitBtn').prop('disabled', true);
+                // Simula un envio real de datos
+                setTimeout(function () {
+                    // Verifica si el email es correcto
+                    var email = $('#email').val();
+                    if (email && validateEmail(email)) {
+                        alert("Te has suscrito con exito!");
+                    } else {
+                        alert("Por favor, ingresa un correo electronico valido.");
+                    }
+                    // Ocultar el spinner y habilitar boton
+                    $('#spinner').hide();
+                    $('#submitBtn').prop('disabled', false);
+                }, 2000); // Espera de segundos en multiplos de 1000
+            });
+            // Valida que el email contenga @ , . , y un final
+            function validateEmail(email) {
+                var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return re.test(email);
+            }
+        });
+    </script>
+</body>
+</html>

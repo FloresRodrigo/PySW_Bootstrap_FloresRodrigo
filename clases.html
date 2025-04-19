@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>GYM - Nuestras clases</title>
+    <link rel="icon" href="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" type="image/jpg">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-dark text-white pt-2">
+        <div class="container-fluid">
+            <!-- Logo y buscar -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+                <!-- Logo y nombre del gimnasio -->
+                <div class="d-flex align-items-center">
+                    <img src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" alt="Logo" width="50" height="50" class="me-2">
+                    <h1 class="h1 mb-0">GYM</h1>
+                </div>
+                <!-- Barra de busqueda para hacer espacio, no funciona -->
+                <form class="mx-4 d-none d-md-block" style="width: 400px;">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                </form>
+                <!-- Burger menu para cuando se vea en moviles -->
+                <button class="navbar-toggler d-md-none border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#megaMenu">
+                    <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                </button>
+            </div>
+            <!-- Mega menu-->
+            <nav class="navbar navbar-expand-md pt-0">
+                <div class="collapse navbar-collapse" id="megaMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- Menu - Pagina principal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="index.html" data-bs-toggle="dropdown">Pagina Principal</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+                                <li><a class="dropdown-item" href="index.html">Clases destacadas</a></li>
+                                <li><a class="dropdown-item" href="index.html">Testimonios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Clases -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="clases.html" data-bs-toggle="dropdown">Clases</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="clases.html">Musculacion</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                                <li><a class="dropdown-item" href="clases.html">CrossFit</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Spinning</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Entrenadores -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="entrenadores.html">Entrenadores</a>
+                        </li>
+                        <!-- Menu - Contacto -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="contacto.html" data-bs-toggle="dropdown">Contacto</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="contacto.html">Consultas</a></li>
+                                <li><a class="dropdown-item" href="contacto.html">Reclamos</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Precios -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="planes.html">Planes y Precios</a>
+                        </li>
+                        <!-- Menu - Blog -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="blog.html" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="blog.html">Posts</a></li>
+                                <li><a class="dropdown-item" href="blog.html">Comentarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <section class="clases-section py-5" style="background-color: #e1e1e1;">
+            <div class="container">
+                <h2 class="text-center mb-4">NUESTRAS CLASES</h2>
+                <!-- Filtro -->
+                <div class="text-center mb-4">
+                    <button class="btn btn-dark btn-sm me-2 filtro" data-filtro="todas">Todas</button>
+                    <button class="btn btn-dark btn-sm me-2 filtro" data-filtro="musculacion">Musculacion</button>
+                    <button class="btn btn-dark btn-sm me-2 filtro" data-filtro="yoga">Yoga</button>
+                    <button class="btn btn-dark btn-sm me-2 filtro" data-filtro="crossfit">Crossfit</button>
+                    <button class="btn btn-dark btn-sm filtro" data-filtro="spinning">Spinning</button>
+                </div>
+                <!-- Tarjetas -->
+                <div class="row" id="contenedorClases">
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="musculacion">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/16513600/pexels-photo-16513600/free-photo-of-gimnasio-equipacion-para-hacer-ejercicio-entrenamiento-de-fuerza-equipo-de-entrenamiento.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Musculacion">
+                            <div class="card-body">
+                                <h5 class="card-title">Fuerza Total</h5>
+                                <p class="card-text">- Levantamiento funcional</p>
+                                <p class="card-text">- Tecnica con barra</p>
+                                <small class="text-muted">musculacion</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="musculacion">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/27810162/pexels-photo-27810162/free-photo-of-plato-metal-fuerza-fitnes.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Musculacion">
+                            <div class="card-body">
+                                <h5 class="card-title">Power Zone</h5>
+                                <p class="card-text">- Hipertrofia guiada</p>
+                                <p class="card-text">- Entrenamiento de biceps y pecho</p>
+                                <small class="text-muted">musculacion</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="yoga">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/3076509/pexels-photo-3076509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Yoga">
+                            <div class="card-body">
+                                <h5 class="card-title">Yoga Vital</h5>
+                                <p class="card-text">Vinyasa Flow</p>
+                                <p class="card-text">Estiramiento consciente</p>
+                                <small class="text-muted">yoga</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="yoga">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/4498220/pexels-photo-4498220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Yoga">
+                            <div class="card-body">
+                                <h5 class="card-title">Calma Interna</h5>
+                                <p class="card-text">Hatha Yoga</p>
+                                <p class="card-text">Respiracion y relajacion profunda</p>
+                                <small class="text-muted">yoga</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="crossfit">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/2261476/pexels-photo-2261476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Crossfit">
+                            <div class="card-body">
+                                <h5 class="card-title">Desafio Intenso</h5>
+                                <p class="card-text">WOD de resistencia</p>
+                                <p class="card-text">Intervalos HIT</p>
+                                <small class="text-muted">crossfit</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="crossfit">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/3837433/pexels-photo-3837433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Crossfit">
+                            <div class="card-body">
+                                <h5 class="card-title">Cross Attack</h5>
+                                <p class="card-text">Circuitos explosivos</p>
+                                <p class="card-text">Tecnica con kettlebells</p>
+                                <small class="text-muted">crossfit</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="spinning">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/3764011/pexels-photo-3764011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Spinning">
+                            <div class="card-body">
+                                <h5 class="card-title">Ritmo Max</h5>
+                                <p class="card-text">Sprint por intervalos</p>
+                                <p class="card-text">Subidas simuladas</p>
+                                <small class="text-muted">spinning</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta -->
+                    <div class="col-6 col-lg-3 mb-4 clase-card" data-clase="spinning">
+                        <div class="card card-clase">
+                            <img src="https://images.pexels.com/photos/3931124/pexels-photo-3931124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Spinning">
+                            <div class="card-body">
+                                <h5 class="card-title">Enduro Ride</h5>
+                                <p class="card-text">Resistencia avanzada</p>
+                                <p class="card-text">Recuperacion activa</p>
+                                <small class="text-muted">spinning</small>
+                            </div>
+                            <div class="card-overlay">
+                                <a href="planes.html" class="btn btn-warning">Ir a planes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- MOSANRY -->
+        <section class="py-5" style="background-color: #1e1e1e;">
+            <div class="container">
+                <h2 class="text-center text-white mb-4">GALERIA DE NUESTROS SOCIOS</h2>
+                <div id="masonry-gallery" class="row" style="margin: 0 auto;">
+                    <!-- Fila 1 -->
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/864990/pexels-photo-864990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 240px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                    <img src="https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 270px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/371049/pexels-photo-371049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 300px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <!-- Fila 2 -->
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/5929236/pexels-photo-5929236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 280px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/1554824/pexels-photo-1554824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 350px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/14055662/pexels-photo-14055662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 250px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <!-- Fila 3 -->
+                        <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/3839310/pexels-photo-3839310.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 300px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/5327460/pexels-photo-5327460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 270px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                    <div class="col-6 col-md-4 p-2 gallery-item">
+                        <img src="https://images.pexels.com/photos/6339652/pexels-photo-6339652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        class="img-fluid w-100"
+                        style="height: 200px; object-fit: cover;"
+                        alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HORARIOS SEMANALES -->
+        <section class="container my-5">
+            <h2 class="text-center text-warning mb-4">HORARIOS SEMANALES</h2>
+            <div class="table-responsive-md">
+                <table class="table table-dark table-bordered text-center align-middle">
+                    <thead class="table-warning text-dark">
+                        <tr>
+                            <th>Horario</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miercoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sabado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="bg-secondary text-light">08:00 - 10:00</th>
+                            <td>Crossfit</td>
+                            <td>Spinning</td>
+                            <td>Yoga</td>
+                            <td>Musculacion</td>
+                            <td>Yoga</td>
+                            <td>Spinning</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">10:00 - 12:00</th>
+                            <td>Yoga</td>
+                            <td>Musculacion</td>
+                            <td>Spinning</td>
+                            <td>Crossfit</td>
+                            <td>Musculacion</td>
+                            <td>Yoga</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">12:00 - 14:00</th>
+                            <td>Spinning</td>
+                            <td>Yoga</td>
+                            <td>Crossfit</td>
+                            <td>Musculacion</td>
+                            <td>Crossfit</td>
+                            <td>Musculacion</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">14:00 - 16:00</th>
+                            <td>Crossfit</td>
+                            <td>Crossfit</td>
+                            <td>Yoga</td>
+                            <td>Spinning</td>
+                            <td>Yoga</td>
+                            <td>Spinning</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">16:00 - 18:00</th>
+                            <td>Musculacion</td>
+                            <td>Spinning</td>
+                            <td>Musculacion</td>
+                            <td>Yoga</td>
+                            <td>Spinning</td>
+                            <td>Crossfit</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">18:00 - 20:00</th>
+                            <td>Spinning</td>
+                            <td>Crossfit</td>
+                            <td>Yoga</td>
+                            <td>Musculacion</td>
+                            <td>Yoga</td>
+                            <td>Musculacion</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-secondary text-light">20:00 - 22:00</th>
+                            <td>Yoga</td>
+                            <td>Musculacion</td>
+                            <td>Spinning</td>
+                            <td>Crossfit</td>
+                            <td>Musculacion</td>
+                            <td>Crossfit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+     <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Formulario para el newsletter -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="mb-3">Suscribete al newsletter</h4>
+                    <form id="formNewsletter" class="d-flex justify-content-between">
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                        <button type="submit" class="btn btn-warning ms-2" id="submitBtn">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                    <!-- Spinner de carga -->
+                    <div id="spinner" class="spinner-border text-warning mt-3" role="status" style="display: none;">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <h4>Seguinos en nuestras redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-facebook" style="font-size: 2rem;"> </i> Facebook
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-twitter" style="font-size: 2rem;"> </i> Twitter
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-instagram" style="font-size: 2rem;"> </i> Instagram
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-x" style="font-size: 2rem;"> </i> (Twitter)
+                        </a>
+                    </div>
+                </div>
+                <!-- Mapa -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="text-center mb-3">Ubicacion</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7279.025505971199!2d-65.29308207402464!3d-24.18881518866709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1744831361720!5m2!1ses-419!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS GENERALES -->
+    <!-- Para bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Para jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- SCRIPTS PARA EL HEADER -->
+    <!-- Script para el mega menu -->
+    <script>
+        $(document).ready(function () {
+            function activarHoverEnDropdowns() {
+                // Solo para pantallas grandes
+                if (window.innerWidth >= 768) {
+                    $('.nav-item.dropdown').hover(
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideDown(200);
+                        },
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideUp(200);
+                        }
+                    );
+                } else {
+                    // Remueve el efecto hover en moviles
+                    $('.nav-item.dropdown').off('mouseenter mouseleave');
+                    // Limpia todos los estilos si es que quedaron
+                    $('.dropdown-menu').removeAttr('style');
+                }
+            }
+            // Ejecuta al cargar la pagina
+            activarHoverEnDropdowns();
+            // Si cambia el tamaño de la pantalla se vuelve a activar
+            $(window).resize(function () {
+                activarHoverEnDropdowns();
+            });
+        });
+    </script>
+    <!-- SCRIPTS PARA LA PAGINA PRINCIPAL  -->
+    <!-- Scripts para el filtrado y tarjetas -->
+    <script>
+        $(document).ready(function () {
+            // Filtrado
+            $('.filtro').on('click', function () {
+                    const filtro = $(this).data('filtro');
+                    $('.filtro').removeClass('btn-warning').addClass('btn-outline-light');
+                    $(this).removeClass('btn-outline-light').addClass('btn-warning');
+                    if (filtro === 'todas') {
+                        $   ('.clase-card').show();
+                } else {
+                    $('.clase-card').hide();
+                    $(`.clase-card[data-clase="${filtro}"]`).show();
+                }
+            });
+          // Efecto hover para cuando esta en pc
+            $('.card-clase').hover(function () {
+                if ($(window).width() >= 768) {
+                    $(this).css({
+                        transform: 'scale(1.05)',
+                        boxShadow: '0 8px 20px rgba(0,0,0,0.5)'
+                    });
+                    $(this).find('.card-overlay').fadeIn(200).css('display', 'flex');
+                }
+            }, function () {
+                if ($(window).width() >= 768) {
+                $(this).css({
+                    transform: 'scale(1)',
+                    boxShadow: 'none'
+                });
+                $(this).find('.card-overlay').fadeOut(200);
+                }
+            });
+          // Para que en moviles sea con click
+            $('.card-clase').on('click', function () {
+                if ($(window).width() < 768) {
+                $(this).find('.card-overlay').fadeToggle(200).css('display', 'flex');
+                }
+            });
+        });
+    </script>
+    <!-- Scripts para la galeria masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#masonry-gallery').masonry({
+                itemSelector: '.gallery-item',
+                percentPosition: true
+            });
+        });
+    </script>
+    <!-- SCRIPTS PARA EL FOOTER -->
+    <!-- Script para el formulario -->
+    <script>
+        $(document).ready(function () {
+            $('#formNewsletter').submit(function (e) {
+                // Previene el comportamiento normal de un formulario, enviar los datos y mandar a otro lado
+                e.preventDefault();
+                // Mostrar el spinner
+                $('#spinner').show();
+                $('#submitBtn').prop('disabled', true);
+                // Simula un envio real de datos
+                setTimeout(function () {
+                    // Verifica si el email es correcto
+                    var email = $('#email').val();
+                    if (email && validateEmail(email)) {
+                        alert("Te has suscrito con exito!");
+                    } else {
+                        alert("Por favor, ingresa un correo electronico valido.");
+                    }
+                    // Ocultar el spinner y habilitar boton
+                    $('#spinner').hide();
+                    $('#submitBtn').prop('disabled', false);
+                }, 2000); // Espera de segundos en multiplos de 1000
+            });
+            // Valida que el email contenga @ , . , y un final
+            function validateEmail(email) {
+                var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return re.test(email);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>GYM - Nuestros profesionales</title>
+    <link rel="icon" href="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" type="image/jpg">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="bg-dark text-white pt-2">
+        <div class="container-fluid">
+            <!-- Logo y buscar -->
+            <div class="d-flex justify-content-between align-items-center flex-wrap mb-2">
+                <!-- Logo y nombre del gimnasio -->
+                <div class="d-flex align-items-center">
+                    <img src="https://image.spreadshirtmedia.net/image-server/v1/compositions/T6A231PA8124PT17X49Y31D16830966W28002H6857Cx000000%3AxB5263C/views/1,width=550,height=550,appearanceId=231,backgroundColor=CBCBCB,noPt=true/cool-diseno-gimnasio-texto-logo-peso-levantamiento-camiseta-hombre.jpg" alt="Logo" width="50" height="50" class="me-2">
+                    <h1 class="h1 mb-0">GYM</h1>
+                </div>
+                <!-- Barra de busqueda para hacer espacio, no funciona -->
+                <form class="mx-4 d-none d-md-block" style="width: 400px;">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                </form>
+                <!-- Burger menu para cuando se vea en moviles -->
+                <button class="navbar-toggler d-md-none border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#megaMenu">
+                    <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                </button>
+            </div>
+            <!-- Mega menu-->
+            <nav class="navbar navbar-expand-md pt-0">
+                <div class="collapse navbar-collapse" id="megaMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <!-- Menu - Pagina principal -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="index.html" data-bs-toggle="dropdown">Pagina Principal</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+                                <li><a class="dropdown-item" href="index.html">Clases destacadas</a></li>
+                                <li><a class="dropdown-item" href="index.html">Testimonios</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Clases -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="clases.html" data-bs-toggle="dropdown">Clases</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="clases.html">Musculacion</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Yoga</a></li>
+                                <li><a class="dropdown-item" href="clases.html">CrossFit</a></li>
+                                <li><a class="dropdown-item" href="clases.html">Spinning</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Entrenadores -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="entrenadores.html">Entrenadores</a>
+                        </li>
+                        <!-- Menu - Contacto -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="contacto.html" data-bs-toggle="dropdown">Contacto</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="contacto.html">Consultas</a></li>
+                                <li><a class="dropdown-item" href="contacto.html">Reclamos</a></li>
+                            </ul>
+                        </li>
+                        <!-- Menu - Precios -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-white" href="planes.html">Planes y Precios</a>
+                        </li>
+                        <!-- Menu - Blog -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="blog.html" data-bs-toggle="dropdown">Blog</a>
+                            <ul class="dropdown-menu p-2">
+                                <li><a class="dropdown-item" href="blog.html">Posts</a></li>
+                                <li><a class="dropdown-item" href="blog.html">Comentarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+    <!-- TARJETAS DE ENTRENADORES -->
+    <section class="py-5 bg-secondary text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <!-- Tarjeta -->
+          <div class="col-md-6 col-lg-3 pb-3">
+            <div class="card flip-card bg-dark text-white border-0" style="perspective: 1000px; height: 420px;">
+              <div class="flip-inner position-relative w-100 h-100" style="transition: transform 0.8s; transform-style: preserve-3d;">
+                <!-- Cara frontal -->
+                <div class="flip-front position-absolute w-100 h-100 text-center p-3" style="backface-visibility: hidden;">
+                  <img src="https://images.pexels.com/photos/999250/pexels-photo-999250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded mb-5" alt="Entrenador">
+                  <h5>Lara Mendez</h5>
+                  <p class="mb-1 text-warning">Yoga & movilidad</p>
+                  <small>"Entrena con mente fuerte y corazon valiente."</small>
+                </div>
+                <!-- Cara trasera -->
+                <div class="flip-back position-absolute w-100 h-100 p-3 d-flex flex-column justify-content-between" style="transform: rotateY(180deg); backface-visibility: hidden;">
+                  <!-- Informacion -->
+                  <div>
+                    <h5>Lara Mendez</h5>
+                    <p>Certificados:</p>
+                    <ul>
+                      <li>Instructora certificada en Hatha Yoga</li>
+                      <li>Especialista en movilidad articular</li>
+                    </ul>
+                    <!-- Barras -->
+                    <p class="mb-1">Fuerza</p>
+                    <div class="progress mb-2" data-value="60" data-color="bg-danger">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Flexibilidad</p>
+                    <div class="progress mb-2" data-value="95" data-color="bg-success">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Resistencia</p>
+                    <div class="progress mb-3" data-value="80" data-color="bg-info">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <!-- Estrellas -->
+                  <div class="rating-container text-center">
+                    <div class="rating" data-rating="4">
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta -->
+          <div class="col-md-6 col-lg-3 pb-3">
+            <div class="card flip-card bg-dark text-white border-0" style="perspective: 1000px; height: 420px;">
+              <div class="flip-inner position-relative w-100 h-100" style="transition: transform 0.8s; transform-style: preserve-3d;">
+                <!-- Cara frontal -->
+                <div class="flip-front position-absolute w-100 h-100 text-center p-3" style="backface-visibility: hidden;">
+                  <img src="https://images.pexels.com/photos/4720770/pexels-photo-4720770.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded mb-5" alt="Entrenador">
+                  <h5>Dante Figueroa</h5>
+                  <p class="mb-1 text-warning">Musculacion avanzada</p>
+                  <small>"No pares hasta sentirte orgulloso."</small>
+                </div>
+                <!-- Cara trasera -->
+                <div class="flip-back position-absolute w-100 h-100 p-3 d-flex flex-column justify-content-between" style="transform: rotateY(180deg); backface-visibility: hidden;">
+                  <!-- Informacion -->
+                  <div>
+                    <h5>Dante Figueroa</h5>
+                    <p>Certificados:</p>
+                    <ul>
+                      <li>Personal Trainer IFBB</li>
+                      <li>Certificado en biomecanica avanzada</li>
+                    </ul>
+                    <!-- Barras -->
+                    <p class="mb-1">Fuerza</p>
+                    <div class="progress mb-2" data-value="95" data-color="bg-danger">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Flexibilidad</p>
+                    <div class="progress mb-2" data-value="50" data-color="bg-success">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Resistencia</p>
+                    <div class="progress mb-3" data-value="85" data-color="bg-info">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <!-- Estrellas -->
+                  <div class="rating-container text-center">
+                    <div class="rating" data-rating="5">
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta -->
+          <div class="col-md-6 col-lg-3 pb-3">
+            <div class="card flip-card bg-dark text-white border-0" style="perspective: 1000px; height: 420px;">
+              <div class="flip-inner position-relative w-100 h-100" style="transition: transform 0.8s; transform-style: preserve-3d;">
+                <!-- Cara frontal -->
+                <div class="flip-front position-absolute w-100 h-100 text-center p-3" style="backface-visibility: hidden;">
+                  <img src="https://images.pexels.com/photos/14055662/pexels-photo-14055662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded mb-5" alt="Entrenador">
+                  <h5>Abril Costa</h5>
+                  <p class="mb-1 text-warning">Crossfit funcional</p>
+                  <small>"Tu cuerpo puede lograrlo, tu mente debe creerlo."</small>
+                </div>
+                <!-- Cara trasera -->
+                <div class="flip-back position-absolute w-100 h-100 p-3 d-flex flex-column justify-content-between" style="transform: rotateY(180deg); backface-visibility: hidden;">
+                  <!-- Informacion -->
+                  <div>
+                    <h5>Abril Costa</h5>
+                    <p>Certificados:</p>
+                    <ul>
+                      <li>Coach Nivel 1 CrossFit</li>
+                      <li>Entrenadora de alta intensidad</li>
+                    </ul>
+                    <!-- Barras -->
+                    <p class="mb-1">Fuerza</p>
+                    <div class="progress mb-2" data-value="85" data-color="bg-danger">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Flexibilidad</p>
+                    <div class="progress mb-2" data-value="70" data-color="bg-success">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Resistencia</p>
+                    <div class="progress mb-3" data-value="90" data-color="bg-info">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <!-- Estrellas -->
+                  <div class="rating-container text-center">
+                    <div class="rating" data-rating="4">
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta -->
+          <div class="col-md-6 col-lg-3 pb-3">
+            <div class="card flip-card bg-dark text-white border-0" style="perspective: 1000px; height: 420px;">
+              <div class="flip-inner position-relative w-100 h-100" style="transition: transform 0.8s; transform-style: preserve-3d;">
+                <!-- Cara frontal -->
+                <div class="flip-front position-absolute w-100 h-100 text-center p-3" style="backface-visibility: hidden;">
+                  <img src="https://images.pexels.com/photos/3763868/pexels-photo-3763868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="img-fluid rounded mb-5" alt="Entrenador">
+                  <h5>Bruno Salazar</h5>
+                  <p class="mb-1 text-warning">Spinning & cardio</p>
+                  <small>"Pedalea fuerte, respira profundo, repite."</small>
+                </div>
+                <!-- Cara trasera -->
+                <div class="flip-back position-absolute w-100 h-100 p-3 d-flex flex-column justify-content-between" style="transform: rotateY(180deg); backface-visibility: hidden;">
+                  <!-- Informacion -->
+                  <div>
+                    <h5>Bruno Salazar</h5>
+                    <p>Certificados:</p>
+                    <ul>
+                      <li>Instructor certificado en spinning</li>
+                      <li>Primeros auxilios deportivos</li>
+                    </ul>
+                    <!-- Barras -->
+                    <p class="mb-1">Fuerza</p>
+                    <div class="progress mb-2" data-value="70" data-color="bg-danger">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Flexibilidad</p>
+                    <div class="progress mb-2" data-value="60" data-color="bg-success">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                    </div>
+                    <p class="mb-1">Resistencia</p>
+                    <div class="progress mb-3" data-value="95" data-color="bg-info">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                    </div>
+                  </div>
+                  <!-- Estrellas -->
+                  <div class="rating-container text-center">
+                    <div class="rating" data-rating="4">
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Formulario para el newsletter -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="mb-3">Suscribete al newsletter</h4>
+                    <form id="formNewsletter" class="d-flex justify-content-between">
+                        <input type="email" class="form-control" id="email" placeholder="Ingresa tu email" required>
+                        <button type="submit" class="btn btn-warning ms-2" id="submitBtn">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </form>
+                    <!-- Spinner de carga -->
+                    <div id="spinner" class="spinner-border text-warning mt-3" role="status" style="display: none;">
+                        <span class="visually-hidden">Cargando...</span>
+                    </div>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-12 col-md-4 mb-4 text-center">
+                    <h4>Seguinos en nuestras redes sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-facebook" style="font-size: 2rem;"> </i> Facebook
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-twitter" style="font-size: 2rem;"> </i> Twitter
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-instagram" style="font-size: 2rem;"> </i> Instagram
+                        </a>
+                        <a href="#" class="text-white d-block mb-2 text-decoration-none">
+                            <i class="bi bi-x" style="font-size: 2rem;"> </i> (Twitter)
+                        </a>
+                    </div>
+                </div>
+                <!-- Mapa -->
+                <div class="col-12 col-md-4 mb-4">
+                    <h4 class="text-center mb-3">Ubicacion</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7279.025505971199!2d-65.29308207402464!3d-24.18881518866709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941b0f5bca584281%3A0xb1d519d50cac526d!2sFacultad%20de%20Ingenier%C3%ADa%20-%20UNJu!5e0!3m2!1ses-419!2sar!4v1744831361720!5m2!1ses-419!2sar" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- SCRIPTS GENERALES -->
+    <!-- Para bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Para jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- SCRIPTS PARA EL HEADER -->
+    <!-- Script para el mega menu -->
+    <script>
+        $(document).ready(function () {
+            function activarHoverEnDropdowns() {
+                // Solo para pantallas grandes
+                if (window.innerWidth >= 768) {
+                    $('.nav-item.dropdown').hover(
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideDown(200);
+                        },
+                        function () {
+                            $(this).find('.dropdown-menu').stop(true, true).slideUp(200);
+                        }
+                    );
+                } else {
+                    // Remueve el efecto hover en moviles
+                    $('.nav-item.dropdown').off('mouseenter mouseleave');
+                    // Limpia todos los estilos si es que quedaron
+                    $('.dropdown-menu').removeAttr('style');
+                }
+            }
+            // Ejecuta al cargar la pagina
+            activarHoverEnDropdowns();
+            // Si cambia el tamaño de la pantalla se vuelve a activar
+            $(window).resize(function () {
+                activarHoverEnDropdowns();
+            });
+        });
+    </script>
+    <!-- SCRIPTS PARA LA PAGINA PRINCIPAL  -->
+    <!-- Script para las tarjetas de entrenadores -->
+    <script>
+      $(document).ready(function () {
+        function isMobile() {
+          return $(window).width() < 768;
+        }
+        // Para que en moviles se haya que hacer click para girar la tarjeta
+        $('.flip-card').on('click', function () {
+          if (isMobile()) {
+            $(this).toggleClass('flipped');
+            animateBars($(this));
+            updateStars($(this));
+          }
+        });
+        // PAra que en pc sea en hover
+        $('.flip-card').hover(function () {
+          if (!isMobile()) {
+            $(this).addClass('flipped');
+            animateBars($(this));
+            updateStars($(this));
+          }
+        }, function () {
+          if (!isMobile()) {
+            $(this).removeClass('flipped');
+          }
+        });
+        // Para que se llenen las barras hasta donde se indica en la clase
+        function animateBars(card) {
+          card.find('.progress').each(function () {
+            const progress = $(this);
+            const value = progress.data('value');
+            const color = progress.data('color') || 'bg-warning';
+            progress.find('.progress-bar').remove();
+            const newBar = $('<div class="progress-bar" role="progressbar"></div>');
+            newBar.addClass(color).css('width', '0%');
+            progress.append(newBar);
+            newBar.animate({ width: value + '%' }, 800);
+          });
+        }
+        // Para hacer las estrellas con brillo progresivo
+        function updateStars(card) {
+          const rating = parseInt(card.find('.rating').data('rating'));
+          const stars = card.find('.rating i');
+          // Limpia cualquier cambio en las estrellas, las reinicia
+          stars.each(function (index) {
+            const star = $(this);
+            star.removeClass('bi-star-fill text-warning bi-star text-secondary');
+            star.css('filter', 'none');
+            // Si habia un intervalo de estrellas girando, este se reinicia
+            const interval = star.data('glowInterval');
+            if (interval) {
+              clearInterval(interval);
+              star.removeData('glowInterval').removeData('glowSet');
+            }
+          });
+          // Establecemos que estrellas son doradas y cuales grises en base al rating colocado
+          stars.each(function (index) {
+            const star = $(this);
+            if (index < rating) {
+              star.addClass('bi-star-fill text-warning');
+            } else {
+              star.addClass('bi-star text-secondary');
+            }
+          });
+          // Hace que el brillo de las estrellas sea un bucle
+          if (!card.data('starAnimation')) {
+            let i = 0;
+            const interval = setInterval(() => {
+              const activeStars = card.find('.rating i.bi-star-fill');
+              activeStars.css('filter', 'none');
+              if (activeStars[i]) {
+                $(activeStars[i]).css('filter', 'drop-shadow(0 0 5px gold)');
+              }
+              i = (i + 1) % activeStars.length;
+            }, 300);
+            card.data('starAnimation', interval);
+          }
+        }
+      });
+    </script>
+    <!-- SCRIPTS PARA EL FOOTER -->
+    <!-- Script para el formulario -->
+    <script>
+        $(document).ready(function () {
+            $('#formNewsletter').submit(function (e) {
+                // Previene el comportamiento normal de un formulario, enviar los datos y mandar a otro lado
+                e.preventDefault();
+                // Mostrar el spinner
+                $('#spinner').show();
+                $('#submitBtn').prop('disabled', true);
+                // Simula un envio real de datos
+                setTimeout(function () {
+                    // Verifica si el email es correcto
+                    var email = $('#email').val();
+                    if (email && validateEmail(email)) {
+                        alert("Te has suscrito con exito!");
+                    } else {
+                        alert("Por favor, ingresa un correo electronico valido.");
+                    }
+                    // Ocultar el spinner y habilitar boton
+                    $('#spinner').hide();
+                    $('#submitBtn').prop('disabled', false);
+                }, 2000); // Espera de segundos en multiplos de 1000
+            });
+            // Valida que el email contenga @ , . , y un final
+            function validateEmail(email) {
+                var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return re.test(email);
+            }
+        });
+    </script>
+</body>
+</html>
